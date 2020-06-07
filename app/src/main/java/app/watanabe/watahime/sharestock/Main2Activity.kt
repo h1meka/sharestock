@@ -17,7 +17,7 @@ class Main2Activity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        button.setOnClickListener {
+        button1.setOnClickListener {
 
             val emailText = editText.text.toString()
             val passText = editText2.text.toString()
@@ -30,8 +30,10 @@ class Main2Activity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
 
-                        val main = Intent ( this,Main5Activity::class.java)
-                        startActivity(main)
+                        val memoA = Intent ( this, Main5Activity::class.java)
+                        startActivity(memoA)
+
+
 
                     } else {
                         Toast.makeText(

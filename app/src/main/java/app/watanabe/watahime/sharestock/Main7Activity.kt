@@ -12,21 +12,21 @@ class Main7Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main7)
 
-        val db = FirebaseFirestore.getInstance()
+        //val db = FirebaseFirestore.getInstance()
 
         // Create a new user with a first and last name
-        RBUTTON.setOnClickListener {
-            val memo1 = hashMapOf(
-                "favorite" to editText5.text.toString(),
-                "address" to editText6.text.toString()
-            )
-
-// Add a new document with a generated ID
-            db.collection("placememo")
-                .add(memo1)
-
-
-        }
+//        RBUTTON.setOnClickListener {
+//            val memo1 = hashMapOf(
+//                "favorite" to editText5.text.toString(),
+//                "address" to editText6.text.toString()
+//            )
+//
+//// Add a new document with a generated ID
+//            db.collection("placememo")
+//                .add(memo1)
+//
+//
+//        }
 
         imageBUTTON.setOnClickListener {
             val memo2 = Intent(this,Main5Activity::class.java)

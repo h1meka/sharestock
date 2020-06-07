@@ -24,8 +24,8 @@ class Main3Activity : AppCompatActivity() {
                     .add(information)
             }
 
-            val memo = Intent ( this,Main5Activity::class.java)
-            startActivity(memo)
+           val memo = Intent ( this, Main5Activity::class.java)
+           startActivity(memo)
         }
 
 
