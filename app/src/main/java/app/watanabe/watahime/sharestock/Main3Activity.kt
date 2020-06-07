@@ -3,6 +3,7 @@ package app.watanabe.watahime.sharestock
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main3.*
 
 class Main3Activity : AppCompatActivity() {
@@ -11,11 +12,25 @@ class Main3Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
 
-        BUTTON.setOnClickListener {
+        val db = FirebaseFirestore.getInstance()
 
-            val registor = Intent ( this,Main5Activity::class.java)
-            startActivity(registor)
+        BUTTON.setOnClickListener {
+            if (editText3.text.isNotEmpty()){
+
+                val information = hashMapOf(
+                    "username" to editText3.text.toString())
+
+                db.collection("information")
+                    .add(information)
+            }
+
+            val memo = Intent ( this,Main5Activity::class.java)
+            startActivity(memo)
         }
 
+
     }
+
+
 }
+
