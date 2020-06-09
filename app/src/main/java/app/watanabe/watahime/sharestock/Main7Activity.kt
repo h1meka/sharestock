@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main7.*
+import kotlinx.android.synthetic.main.activity_main7.addresstext
+import kotlinx.android.synthetic.main.item_memo_data_cell.*
 
 class Main7Activity : AppCompatActivity() {
 
@@ -12,26 +14,26 @@ class Main7Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main7)
 
-        //val db = FirebaseFirestore.getInstance()
+        val db = FirebaseFirestore.getInstance()
 
-        // Create a new user with a first and last name
-//        RBUTTON.setOnClickListener {
-//            val memo1 = hashMapOf(
-//                "favorite" to editText5.text.toString(),
-//                "address" to editText6.text.toString()
-//            )
-//
-//// Add a new document with a generated ID
-//            db.collection("placememo")
-//                .add(memo1)
-//
-//
-//        }
+       RBUTTON.setOnClickListener {
+            val memo1 = hashMapOf(
+               "favorite" to favorite1.text.toString(),
+                "address" to addresstext.text.toString()
+           )
+           val favorite = favoritetext.text.toString()
+           val address = addresstext.text.toString()
+           val memo = MemoData(favorite, address)
 
-        imageBUTTON.setOnClickListener {
+           db.collection("placememo")
+               .add(memo1)
+       }
+
+        backbutton2.setOnClickListener {
             val memo2 = Intent(this,Main5Activity::class.java)
             startActivity(memo2);
             overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         }
     }
 }
+

@@ -11,7 +11,7 @@ class Main6Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main6)
 
-        imageBUTTON.setOnClickListener {
+        backbutton.setOnClickListener {
 
             val main1 = Intent ( this, Main4Activity::class.java)
             startActivity(main1)

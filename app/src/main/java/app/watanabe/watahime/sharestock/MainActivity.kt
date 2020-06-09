@@ -1,21 +1,12 @@
 package app.watanabe.watahime.sharestock
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.Gravity
-import android.widget.EditText
 import android.widget.Toast
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,10 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        Button.setOnClickListener {
+        sakuseibutton.setOnClickListener {
 
-            val emailText = Text1.text.toString()
-            val passText = Text2.text.toString()
+            val emailText = emailText.text.toString()
+            val passText = passwordText.text.toString()
 
             auth.createUserWithEmailAndPassword(emailText, passText)
                 .addOnCompleteListener(this) { task ->
@@ -57,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         val db3 = FirebaseFirestore.getInstance()
 
-        Button2.setOnClickListener {
+        kotirabutton.setOnClickListener {
 
             val signin = Intent (this,Main2Activity::class.java)
             startActivity(signin)

@@ -7,7 +7,7 @@
     tools:context=".Main3Activity">
 
     <ImageButton
-        android:id="@+id/imageBUTTON"
+        android:id="@+id/backbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/usernemaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -26,10 +26,10 @@
         android:layout_marginTop="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBUTTON" />
+        app:layout_constraintTop_toBottomOf="@+id/backbutton" />
 
     <Button
-        android:id="@+id/BUTTON"
+        android:id="@+id/registorbutton"
         android:text="登録"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,6 +37,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/usernemaText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

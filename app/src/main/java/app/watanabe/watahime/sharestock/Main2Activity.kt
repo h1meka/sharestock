@@ -17,10 +17,10 @@ class Main2Activity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        button1.setOnClickListener {
+        loginbutton.setOnClickListener {
 
-            val emailText = editText.text.toString()
-            val passText = editText2.text.toString()
+            val emailText = loginemailText.text.toString()
+            val passText = loginpasswordText.text.toString()
 
             auth.signInWithEmailAndPassword(emailText, passText)
                 .addOnCompleteListener(this) { task ->
@@ -32,9 +32,6 @@ class Main2Activity : AppCompatActivity() {
 
                         val memoA = Intent ( this, Main5Activity::class.java)
                         startActivity(memoA)
-
-
-
                     } else {
                         Toast.makeText(
                             baseContext, "Login 失敗",

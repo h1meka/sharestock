@@ -14,11 +14,11 @@ class Main3Activity : AppCompatActivity() {
 
         val db = FirebaseFirestore.getInstance()
 
-        BUTTON.setOnClickListener {
-            if (editText3.text.isNotEmpty()){
+        registorbutton.setOnClickListener {
+            if (usernemaText.text.isNotEmpty()){
 
                 val information = hashMapOf(
-                    "username" to editText3.text.toString())
+                    "username" to usernemaText.text.toString())
 
                 db.collection("information")
                     .add(information)
@@ -27,10 +27,6 @@ class Main3Activity : AppCompatActivity() {
            val memo = Intent ( this, Main5Activity::class.java)
            startActivity(memo)
         }
-
-
     }
-
-
 }
 

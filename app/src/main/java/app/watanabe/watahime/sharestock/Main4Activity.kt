@@ -15,19 +15,10 @@ class Main4Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main4)
 
-
-
-
-
-
-
         imageButton2.setOnClickListener {
 
             val add = Intent (this,Main6Activity::class.java)
             startActivity(add)
         }
-
-        // Create a new user with a first and last name
-
     }
 }

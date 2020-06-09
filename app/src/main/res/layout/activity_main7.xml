@@ -18,7 +18,7 @@
         />
 
     <ImageButton
-        android:id="@+id/imageBUTTON"
+        android:id="@+id/backbutton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#26a69a"
@@ -46,12 +46,12 @@
         android:layout_marginBottom="23dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintBottom_toTopOf="@+id/favoritetext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/favoritetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -71,12 +71,12 @@
         android:layout_marginBottom="49dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="37dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        app:layout_constraintBottom_toTopOf="@+id/address2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/favoritetext" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/addresstext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -98,7 +98,7 @@
         android:layout_marginBottom="266dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/address2" />
 
     <ImageButton
         android:id="@+id/imageButton4"

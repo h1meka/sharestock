@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
     <Button
-        android:id="@+id/addbutton"
+        android:id="@+id/newbutton"
         android:text="更新"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
         />
 
     <ImageButton
-        android:id="@+id/imageBUTTON"
+        android:id="@+id/backbutton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#26a69a"
