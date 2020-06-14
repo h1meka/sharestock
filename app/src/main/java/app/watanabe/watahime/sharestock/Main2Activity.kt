@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class Main2Activity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class Main2Activity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        loginbutton.setOnClickListener {
+        sakuseibutton.setOnClickListener {
 
             val emailText = loginemailText.text.toString()
             val passText = loginpasswordText.text.toString()

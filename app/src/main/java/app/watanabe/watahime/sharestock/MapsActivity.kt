@@ -1,16 +1,19 @@
 package app.watanabe.watahime.sharestock
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_main7.*
+import kotlinx.android.synthetic.main.activity_maps.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+
 
     private lateinit var mMap: GoogleMap
 
@@ -22,7 +25,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -36,8 +38,48 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val tokyo = LatLng(36.0, 140.0)
+        //mMap.addMarker(MarkerOptions().position(tokyo).title("Marker in Tokyo"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(tokyo))
+
+
+
+        //        mMap.setOnMapClickListener(object : GoogleMap.OnMapClickListener {
+//            override fun onMapClick(latlng: LatLng) {
+//                val location = LatLng(latlng.latitude, latlng.longitude)
+//                mMap.addMarker(MarkerOptions().position(location))
+//            }
+       // })
+
+
+//        class MapsActivity : AppCompatActivity(), GoogleMap.OnMapLongClickListener{
+//            mMap.setOnMapLongClickListener(this)
+//            private lateinit var mMap:GoogleMap
+//            override fun onMapLongClick(p0: LatLng?) {
+//               var marker = MarkerOptions().position(point).title("目的地")
+//                mMap!!.addMarker(marker)
+//                drawPolyline(startmarker!!,endmarker!!)
+//            }
+//        }
+
+//        RBUTTON.setOnClickListener {
+//            mMap = googleMap
+//            val lag = addresstext.text.toString().toInt()
+//
+//            val place = LatLng(lag,)
+//        }
+        MarkerOptions()
+            .position(LatLng(10.0, 10.0))
+            .title("Hello world")
+
+
     }
+
+
+
+
+
+
+
+
 }

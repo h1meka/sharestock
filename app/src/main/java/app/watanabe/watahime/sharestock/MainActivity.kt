@@ -40,17 +40,11 @@ class MainActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
-
-
         }
 
+        button_.setOnClickListener {
 
-
-        val db3 = FirebaseFirestore.getInstance()
-
-        kotirabutton.setOnClickListener {
-
-            val signin = Intent (this,Main2Activity::class.java)
+            val signin = Intent (this,Main5Activity::class.java)
             startActivity(signin)
      }
 
