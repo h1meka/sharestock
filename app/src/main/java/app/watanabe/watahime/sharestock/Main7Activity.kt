@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
+import android.widget.SeekBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -32,18 +33,37 @@ class Main7Activity : AppCompatActivity() {
         val storage = FirebaseStorage.getInstance()
         val db = FirebaseFirestore.getInstance()
 
+        seekBar.setOnSeekBarChangeListener(object :SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                Log.d("hoge","onProgressChanged $progress")
+                textView4.text = "$progress%"
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            }
+
+
+        })
+
 
 
         RBUTTON.setOnClickListener {
             val memo1 = hashMapOf(
                 "favorite" to favoritetext.text.toString(),
-                "address" to addresstext.text.toString()
+                "address" to addresstext.text.toString(),
+                "percent" to textView4.text.toString()
             )
 
-            db.collection("placememo")
+
+
+            db.collection("memo")
                 .add(memo1)
 
-            val docRef = db.collection("placememo")
+            val docRef = db.collection("memo")
             docRef.get().addOnSuccessListener {
                     documentSnapshot ->
                 val memo = documentSnapshot.toObjects(memoData::class.java)
@@ -59,23 +79,23 @@ class Main7Activity : AppCompatActivity() {
                 android.R.anim.slide_out_right
             )
         }
-        button_upload.setOnClickListener {
-
-            val intent = Intent(Intent.ACTION_PICK)
-            intent.type = "image/="
-            startActivityForResult(intent, 0)
-        }
+//        button_upload.setOnClickListener {
+//
+//            val intent = Intent(Intent.ACTION_PICK)
+//            intent.type = "image/="
+//            startActivityForResult(intent, 0)
+//        }
     }
-        var selectedPhotoUri: Uri? = null
-        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            (super.onActivityResult(requestCode, resultCode, data))
-            if (data != null) {
-                selectedPhotoUri = data.data
-           }
-            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
-            val bitmapDrawable = BitmapDrawable(bitmap)
-            button_upload.setBackgroundDrawable(bitmapDrawable)
-        }
+//        var selectedPhotoUri: Uri? = null
+//        override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//            (super.onActivityResult(requestCode, resultCode, data))
+//            if (data != null) {
+//                selectedPhotoUri = data.data
+//           }
+//            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
+//            val bitmapDrawable = BitmapDrawable(bitmap)
+//            button_upload.setBackgroundDrawable(bitmapDrawable)
+//        }
 
 
 //    private fun uploadImageToFirebaseStorare(){

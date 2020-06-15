@@ -27,6 +27,7 @@ class RecyclerViewAdapter (private val context : Context):
         val item = items[position]
         holder.favoriteTextView.text = item.favorite
         holder.addressTextView.text = item.address
+       holder.percentTextView.text = item.percent
     }
 
     fun addAll(items:List<memoData>) {
@@ -36,5 +37,7 @@ class RecyclerViewAdapter (private val context : Context):
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
    val favoriteTextView: TextView = view.findViewById(R.id.favorite1)
         val addressTextView: TextView = view.findViewById(R.id.address1)
+        val percentTextView: TextView = view.findViewById(R.id.percent1)
+
     }
 }
