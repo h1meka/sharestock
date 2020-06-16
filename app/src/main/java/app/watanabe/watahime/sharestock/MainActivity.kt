@@ -1,16 +1,20 @@
 package app.watanabe.watahime.sharestock
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.auth.FirebaseAuth
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import com.google.common.collect.Maps
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main5.*
 
 class MainActivity : AppCompatActivity() {
+
+//    private fun animateRotationY(img:) {
+//        val objectAnimator = ObjectAnimator.ofFloat(img, "rotationY", 2f)
+//        objectAnimator.duration = 2000
+//        objectAnimator.repeatCount = -1
+//        objectAnimator.start()}
 
     val db = FirebaseFirestore.getInstance()
 
@@ -23,6 +27,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
+
+
+
 
 //            val adapter = RecyclerViewAdapter(this)
 //        recyclerview.layoutManager = LinearLayoutManager(this)

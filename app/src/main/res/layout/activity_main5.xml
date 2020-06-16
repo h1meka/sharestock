@@ -13,7 +13,8 @@
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addmemobutton"
@@ -45,16 +46,16 @@
         app:srcCompat="@drawable/ic_priority_high"
         tools:ignore="MissingConstraints" />
 
-    <androidx.appcompat.widget.Toolbar
+<!--    <androidx.appcompat.widget.Toolbar-->
 
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?android:actionBarSize"
-        android:background="?android:colorPrimary"
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:minHeight="?android:actionBarSize"-->
+<!--        android:background="?android:colorPrimary"-->
 
 
-        />
+<!--        />-->
 
     <TextView
         android:id="@+id/textView3"
@@ -66,17 +67,6 @@
         android:layout_marginTop="510dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recyclerview"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
-        app:layout_constraintStart_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent" />
 
 

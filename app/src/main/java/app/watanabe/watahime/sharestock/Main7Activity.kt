@@ -30,7 +30,7 @@ class Main7Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main7)
-        val storage = FirebaseStorage.getInstance()
+        //val storage = FirebaseStorage.getInstance()
         val db = FirebaseFirestore.getInstance()
 
         seekBar.setOnSeekBarChangeListener(object :SeekBar.OnSeekBarChangeListener{
@@ -60,10 +60,10 @@ class Main7Activity : AppCompatActivity() {
 
 
 
-            db.collection("memo")
+            db.collection("memomemo")
                 .add(memo1)
 
-            val docRef = db.collection("memo")
+            val docRef = db.collection("memomemo")
             docRef.get().addOnSuccessListener {
                     documentSnapshot ->
                 val memo = documentSnapshot.toObjects(memoData::class.java)
