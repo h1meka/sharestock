@@ -6,24 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView12"
+        android:text="Stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:layout_marginTop="247dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button_"
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginEnd="175dp"
+        android:text="始める"
+        android:layout_width="123dp"
+        android:layout_height="69dp"
         android:layout_marginBottom="248dp"
+        android:fontFamily="sans-serif-black"
+        android:backgroundTint="#ff7043"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
+        android:id="@+id/textView6"
+        android:text="Share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icon"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="89dp" />
+        android:textSize="50sp"
+        android:layout_marginStart="77dp"
+        android:layout_marginBottom="148dp"
+        android:layout_marginTop="199dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -61,7 +61,8 @@ class Main5Activity : AppCompatActivity() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                
+                val id = docRef.id
+                db.collection("memomemo").document("").delete()
 
 
 

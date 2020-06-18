@@ -39,6 +39,7 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="167dp"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
@@ -53,6 +54,7 @@
         android:layout_marginTop="33dp"
         android:layout_marginStart="31dp"
         android:layout_marginEnd="167dp"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -67,6 +69,7 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="167dp"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -81,6 +84,7 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="167dp"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
@@ -95,21 +99,26 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="167dp"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
     <TextView
         android:id="@+id/textView"
-        android:text="TextView"
-        android:layout_width="110dp"
-        android:layout_height="38dp"
+        android:layout_width="179dp"
+        android:layout_height="46dp"
         android:layout_marginStart="66dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginBottom="81dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:layout_marginBottom="113dp"
+        android:layout_marginTop="116dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BUTTON" />
 
     <Button
         android:id="@+id/BUTTON"
@@ -118,6 +127,9 @@
         android:layout_height="wrap_content"
         android:onClick="decide"
         android:layout_marginTop="49dp"
+        android:fontFamily="sans-serif-black"
+        android:backgroundTint="#ff7043"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,10 +140,14 @@
         android:text="に決めた！"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="97dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="93dp"
+        android:layout_marginStart="56dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"
+        android:layout_marginBottom="124dp"
+        android:layout_marginTop="612dp"
+        android:layout_marginEnd="99dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/BUTTON" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

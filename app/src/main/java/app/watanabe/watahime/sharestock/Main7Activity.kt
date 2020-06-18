@@ -63,13 +63,14 @@ class Main7Activity : AppCompatActivity() {
             db.collection("memomemo")
                 .add(memo1)
 
-            val docRef = db.collection("memomemo")
+            val docRef = db.collection("memomemo").orderBy("percent")
             docRef.get().addOnSuccessListener {
                     documentSnapshot ->
                 val memo = documentSnapshot.toObjects(memoData::class.java)
 
                 Log.d("hoge","${memo.toString()}}")
             }
+
         }
         backbutton2.setOnClickListener {
             val memo2 = Intent(this, Main5Activity::class.java)
